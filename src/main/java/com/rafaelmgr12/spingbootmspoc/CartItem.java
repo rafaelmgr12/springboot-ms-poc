@@ -6,8 +6,39 @@ import java.util.Objects;
 
 class CartItem {
 
-	//write your code here 
-    
+	private Item item;
+	private int quantity;
+	private CartItem() {}
+
+	CartItem(Item item) {
+		this.item = item;
+		this.quantity = 1;
+	}
+
+	public void increment() {
+		this.quantity++;
+	}
+
+	public void decrement() {
+		this.quantity--;
+	}
+
+	public Item getItem() {
+		return item;
+	}
+
+	public void setItem(Item item) {
+		this.item = item;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)
